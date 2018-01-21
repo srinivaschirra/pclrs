@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>A simple map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/static/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .leaflet-popup.leaflet-zoom-animated {
+            opacity: 1;
+            transform: translate3d(683px, 331px, 0px);
+            top: -2px!important;
+            left: -2px!important;
+        }
+
+        .leaflet-popup-tip-container {
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            display: none!important;
+            position: relative;
+        }
+
+        .leaflet-popup-content {
+            width: 350px;
+            min-height: 100px;
+            padding: 0px!important;
+        }
+
+        .leaflet-popup-content-wrapper,
+        .map-legends,
+        .map-tooltip {
+            background: #fff;
+            border-radius: 8px!important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div> .
+<!--
+    <div class='modal-header' style='padding:0px;border-bottom: 0px solid #e5e5e5;'>
+        <div class='col-md-3'><img class='img-responsive' src='https://www.ping.earth/media/star-3d-bored.png' alt='Logo' style='margin-top: 8px;'></div>
+        <div class='col-md-9 padding-less'>
+            <h4 class='modal-title' id='lineModalLabel' style='color: #868282;font-size: 34px;font-weight: 900;margin-top: -22px;'>Pray</h4>
+            <form style='margin-top: -33px;'>
+                <div class='form-group' style='text-align:left'>
+                    <label for='comment' style='margin-left: 2px;margin-top:4px;color:#868282;text-align:left'>Description:</label>
+                    <textarea class='form-control ping-form' rows='4' id='comment' placeholder='My heart goes out to all t' style='outline: none;resize: none;padding:0px 0px;'></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class='odal-footer' style='padding:0px;' id=''>
+        <div class='btn-group btn-group-justified' style='color:#868282' role='group' aria-label='group button'>
+            <div class='col-md-8'>xalxkjalsxjijxoia jxoi a nuxahcxoah</div>
+            <div id='saveImage' class='col-md-3 padding-less' data-action='save' role='button'>
+                <button type='button' class='btn-ping' click='clickfunction()'>Save</button>
+            </div>
+        </div>
+    </div>.
+-->
+    <script>
+        //L.mapbox.accessToken = 'pk.eyJ1IjoiYmFydHBpbmciLCJhIjoiY2pheTQ4Nm85MTQzejJxcWs4dWc5Yzh3cyJ9.0UyqGF5cYVmWnWmVodADYQ';
+        //var map = L.mapbox.map('map', 'mapbox.streets')
+        //    .setView([40, -74.50], 9);
+        var map = L.map('map', {
+            scrollWheelZoom: false
+        }).setView([43.64701, -79.39425], 15);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var firefoxIcon = L.icon({
+            iconUrl: 'https://www.ping.earth/media/star-3d-bored.png'
+            , iconSize: [38, 40], // size of the icon
+        });
+        L.marker([43.64701, -79.39425], {
+            icon: firefoxIcon
+        }).bindPopup(" <div class='modal-header clearfix' style='padding:0px;border-bottom: 1px solid #e5e5e5;'><div class='col-md-3'><img class='img-responsive' src='https://www.ping.earth/media/star-3d-bored.png' alt='Logo' style='margin-top: 8px;'></div><div class='col-md-9 padding-less'><h4 class='modal-title' id='lineModalLabel' style='color: #868282;font-size: 34px;font-weight: 900;margin-top: -15px;'>Pray</h4><form style='margin-top: -33px;'><div class='form-group' style='text-align:left'><label for='comment' style='margin-left: 2px;margin-top:4px;color:#868282;text-align:left'>Description:</label><textarea class='form-control ping-form' rows='4' id='comment' placeholder='My heart goes out to all t' style='outline: none;resize: none;padding:0px 0px;'></textarea></div></form></div></div><div class='odal-footer' style='padding:0px;'   id=''><div class='btn-group btn-group-justified' style='color:#868282' role='group' aria-label='group button'><div class='col-md-8'>xalxkjalsxjijxoia jxoi a nuxahcxoah</div><div id='saveImage' class='col-md-3 padding-less' data-action='save' role='button'><button type='button' class='btn-ping' click='clickfunction()'>Save</button></div></div></div>. ").addTo(map);
+    </script>
+</body>
+
+</html>

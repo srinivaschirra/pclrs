@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PingColors</title>
+    <meta name="description" content="The Human Connection Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic:latin|Open+Sans+Condensed:700:latin|Bad+Script::latin" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/static/css/custom.css" />
+    <link rel="stylesheet" href="/static/css/examples.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/neo.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> </head>
+
+<body>
+    <div class="ping-main">
+        <div class="container">
+            <div class="col-md-3">
+                <a href="/"><img class="img-responsive logo" src="/static/images/logo.PNG" alt="Logo"></a>
+            </div>
+            <div class="col-md-6 center-div">
+                <div class="col-md-2 padding-less border-lr"><a href="/"><i class="fa fa-globe" aria-hidden="true"></i>
+		<br>World map</a></div>
+                <div class="col-md-2 padding-less"><a href="/persona"><i class="fa fa-user" aria-hidden="true"></i>
+		<br>Persona</a></div>
+                <div class="col-md-4">
+                    <div class="plus-button plusbtn" id="circle-show"> <img class="img-responsive" src="https://www.ping.earth/media/rainbow-circle.png" alt="Logo"> </div>
+                    <div class="ping-circle1" id="circle-hide"> <i class="fa fa-circle circle1" aria-hidden="true"></i> <i class="fa fa-circle circle2" aria-hidden="true"></i> <i class="fa fa-circle circle3" aria-hidden="true"></i> <i class="fa fa-circle circle4" aria-hidden="true"></i> <i class="fa fa-circle circle5" aria-hidden="true"></i> <i class="fa fa-circle circle6" aria-hidden="true"></i> <i class="fa fa-circle circle7" aria-hidden="true"></i> </div>
+                    <div class="social-button ping0">
+                        <div class="social-button facebook-button06 plusbtn">
+                            <a class="angry sbtn" id='6'> <img class="img-responsive" src="/static/images/angry-im.png" alt="Logo"> <span class="starfont">Angry</span> </a>
+                        </div>
+                        <div class="social-button facebook-button03">
+                            <a class="sad sbtn" id='2'> <img class="img-responsive" src="/static/images/sad.png" alt="Logo"> <span class="starfont">Sad</span> </a>
+                        </div>
+                        <div class="social-button facebook-button04">
+                            <a class="change sbtn" id='4'> <img class="img-responsive" src="/static/images/change.png" alt="Logo"> <span class="starfont">Change</span> </a>
+                        </div>
+                        <div class="social-button facebook-button0">
+                            <a class="Love sbtn" id='5'> <img class="img-responsive" src="/static/images/love.png" alt="Logo"> <span class="starfont">Love</span> </a>
+                        </div>
+                        <div class="social-button facebook-button05">
+                            <a class="thankful sbtn" id='3'> <img class="img-responsive" src="/static/images/thankful.png" alt="Logo"> <span class="starfont" style="margin-left: -9px;">Thankful</span> </a>
+                        </div>
+                        <div class="social-button facebook-button01">
+                            <a class="bliss sbtn" id='7'> <img class="img-responsive" src="/static/images/blissful.png" alt="Logo"> <span class="starfont">Blissful</span> </a>
+                        </div>
+                        <div class="social-button facebook-button02">
+                            <a class="happy sbtn" id='1'> <img class="img-responsive" src="/static/images/happy.png" alt="Logo"> <span class="starfont">Happy</span> </a>
+                        </div>
+                        <div class="social-button facebook-button07">
+                            <a class="happy sbtn" id='6'> <img class="img-responsive" src="/static/images/excited.png" alt="Logo"> <span class="starfont" style="margin-left: -5px;">Excited </span> </a>
+                        </div>
+                        <div class="social-button facebook-button08">
+                            <a class="happy sbtn" id='7'> <img class="img-responsive" src="/static/images/relaxed.png" alt="Logo"> <span class="starfont" style="margin-left: -9px;">Relaxed </span> </a>
+                        </div>
+                        <div class="social-button facebook-button09">
+                            <a class="happy sbtn" id='8'> <img class="img-responsive" src="/static/images/depressed.png" alt="Logo"> <span class="starfont" style="margin-left: -20px;">Depressed </span> </a>
+                        </div>
+                        <div class="social-button facebook-button10">
+                            <a class="happy sbtn" id='13'> <img class="img-responsive" src="/static/images/frustrated%20.png" alt="Logo"> <span class="starfont" style="margin-left: -20px;">Frustrated </span> </a>
+                        </div>
+                        <div class="social-button facebook-button12">
+                            <a class="happy sbtn" id='9'> <img class="img-responsive" src="/static/images/prayer.png" alt="Logo"> <span class="starfont" style="margin-left: -11px;">Prayer </span> </a>
+                        </div>
+                        <div class="social-button facebook-button13">
+                            <a class="happy sbtn" id='10'> <img class="img-responsive" src="/static/images/hope.png" alt="Logo"> <span class="starfont">Hope </span> </a>
+                        </div>
+                        <div class="social-button facebook-button14">
+                            <a class="happy sbtn" id='11'> <img class="img-responsive" src="/static/images/idea.png" alt="Logo"> <span class="starfont">Idea </span> </a>
+                        </div>
+                        <div class="social-button facebook-button15">
+                            <a class="happy sbtn" id='12'> <img class="img-responsive" src="/static/images/belief.png" alt="Logo"> <span class="starfont">Belief</span> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 padding-less border-lr">
+                    <a href="/stats"> <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                        <br/>Stats</a>
+                </div>
+                <div class="col-md-2 padding-less"><a href="/about"><i class="fa fa-info-circle" aria-hidden="true"></i>
+		<br/>About</a> </div>
+            </div>
+            <div class="col-md-3 text-right"> <i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size: 17px;margin-top: 17px;"></i> </div>
+        </div>
+    </div> {% block body %}{% endblock %}
+    <script id='pleaf-tmpl' type='text/template'>
+        <div class='ping-main-div clearfix'>
+            <div class='modal-header clearfix' style='padding:0px;border-bottom: 0px solid #e5e5e5;'>
+                <div class='col-md-2'> <img class='img-responsive' src='[[pingIcon]]' alt='Logo' style='margin-top: 8px;'> </div>
+                <div class='col-md-10 padding-less'>
+                    <h4 class='modal-title' id='lineModalLabel' style='color: #868282;font-size: 42px;font-weight: 900;margin-top: -29px;text-align: left;font-family: alegreyaregular;'>[[pingTitle]]</h4>
+                    <form style='margin-top: -33px;'>
+                        <div class='form-group' style='text-align: left;margin-left: 4px;'> <i>[[pingDescription]]</i> </div>
+                    </form>
+                    <div class='col-md-7 padding-less' style='color: #868282;font-size: 11px;font-weight: 600;text-align: left;'> [[pingTime]] </div>
+                    <div class='col-md-5 padding-less' style='font-weight: 600;font-size: 11px;color: #868282;'>[[pingLocation]] </div>
+                </div>
+    </script>
+    <script id='epleaf-tmpl' type='text/template'>
+        <div class='modal-header clearfix' style='padding:0px;border-bottom: 1px solid #e5e5e5;' id='feature_infos'>
+            <div class='col-md-3'> <img class='img-responsive' src='[[pingIcon]]' alt='Logo' style='margin-top: 8px;'> </div>
+            <div class='col-md-9 padding-less'>
+                <h4 class='modal-title' id='lineModalLabel' style='color: #868282;font-size: 34px;font-weight: 900;margin-top: -15px;'>[[pingTitle]]</h4>
+                <form style='margin-top: -33px;'>
+                    <div class='form-group' style='text-align:left'>
+                        <textarea class='form-control ping-form' rows='4' id='comment' placeholder='Write more about how you feel' style='outline: none;resize: none;padding:0px 0px;'></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class='odal-footer' style='padding:0px;' id=''>
+            <div class='btn-group btn-group-justified' style='color:#868282' role='group' aria-label='group button'>
+                <div class='col-md-8'>xalxkjalsxjijxoia jxoi a nuxahcxoah </div>
+                <div id='saveImage' class='col-md-4 text-right padding-less' data-action='save' role='button'>
+                    <button type='button' class='btn-ping ' id='clickclose' click='clickfunction()' onClick="alert('Hello I am alert')">Save</button>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

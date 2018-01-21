@@ -1,0 +1,116 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title ng-bind="pagetitle"></title>
+    <meta name="description" content="The Human Connection Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic:latin|Open+Sans+Condensed:700:latin|Bad+Script::latin" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css"/>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css"/>
+    <link rel="stylesheet" href="/static/css/custom.css"/>
+</head>
+
+<body>
+    <div class="ping-main">
+      <div class="container">
+            <div class="col-md-3">
+                <a href="map.html"><img class="img-responsive logo" src="/static/images/logo.PNG" alt="Logo"></a>
+            </div>
+            <div class="col-md-6 center-div">
+                <div class="col-md-2 padding-less border-lr"><a href="/"><i class="fa fa-globe" aria-hidden="true"></i>
+                    <br>World map</a></div>
+                <div class="col-md-2 padding-less"><a href="/persona"><i class="fa fa-user" aria-hidden="true"></i>
+                    <br>Persona</a></div>
+                <div class="col-md-4">
+                    <div class="plus-button plusbtn"><img class="img-responsive" src="https://www.ping.earth/media/rainbow-circle.png" alt="Logo"> </div>
+                    <div class="ping-circle1"> <i class="fa fa-circle circle1" aria-hidden="true"></i> <i class="fa fa-circle circle2" aria-hidden="true"></i> <i class="fa fa-circle circle3" aria-hidden="true"></i> <i class="fa fa-circle circle4" aria-hidden="true"></i> <i class="fa fa-circle circle5" aria-hidden="true"></i> <i class="fa fa-circle circle6" aria-hidden="true"></i> <i class="fa fa-circle circle7" aria-hidden="true"></i></div>
+                        <div class="social-button ping0">
+                        <div class="social-button facebook-button06 plusbtn">
+                            <a class="angry sbtn" id='6'> <img class="img-responsive" src="/static/images/angry-im.png" alt="Logo"> <span class="starfont">Angry</span> </a>
+                        </div>
+                        <div class="social-button facebook-button03">
+                            <a class="sad sbtn" id='2'> <img class="img-responsive" src="/static/images/sad.png" alt="Logo"> <span class="starfont">Sad</span> </a>
+                        </div>
+                        <div class="social-button facebook-button04">
+                            <a class="change sbtn" id='4'> <img class="img-responsive" src="/static/images/change.png" alt="Logo"> <span class="starfont">Change</span> </a>
+                        </div>
+                        <div class="social-button facebook-button0">
+                            <a class="Love sbtn" id='5'> <img class="img-responsive" src="/static/images/love.png" alt="Logo"> <span class="starfont">Love</span> </a>
+                        </div>
+                        <div class="social-button facebook-button05">
+                            <a class="thankful sbtn" id='3'> <img class="img-responsive" src="/static/images/thankful.png" alt="Logo"> <span class="starfont">Thankful</span> </a>
+                        </div>
+                        <div class="social-button facebook-button01">
+                            <a class="bliss sbtn" id='7'> <img class="img-responsive" src="/static/images/blissful.png" alt="Logo"> <span class="starfont">Blissful</span> </a>
+                        </div>
+                        <div class="social-button facebook-button02">
+                            <a class="happy sbtn" id='1'> <img class="img-responsive" src="/static/images/happy.png" alt="Logo"> <span class="starfont">Happy</span> </a>
+                        </div>
+                         </div>
+
+
+
+                </div>
+                <div class="col-md-2 padding-less border-lr">
+                    <a href="/stats"> <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                        <br/>Stats</a>
+                </div>
+                <div class="col-md-2 padding-less"><a href="/templates/about.html"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <br/>About</a> </div>
+            </div>
+            <div class="col-md-3 text-right"> <i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size: 17px;margin-top: 17px;"></i> </div>
+        </div>
+    </div>
+    <div class="banner-btn-ping">
+      <button type="button" onclick=duration_handler("hr") class="btn btn-primary-ping">Hour</button>
+      <button type="button" onclick=duration_handler("dy") class="btn btn-primary-ping">Day</button>
+      <button type="button" onclick=duration_handler("wk") class="btn btn-primary-ping">Week</button>
+      <button type="button" onclick=duration_handler("mn") class="btn btn-primary-ping">Month</button>
+      <button type="button" onclick=duration_handler("yr") class="btn btn-primary-ping">Year</button>
+      <button type="button" onclick=duration_handler("at") class="btn btn-primary-ping">All Time</button>
+    </div>
+    <div id='map'></div>
+    <div class="footer-ping">
+      <div class="container-fluid">
+        <div id='ftr' class="pull-left footer-left0" />
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+    <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+
+    <script src="static/js/neo.js"></script>
+      <script>
+      </script>
+      <div class="ping-leap0" style="visibility:hidden;display:block" id="pleaf">
+        <div class="modal-dialog" style="width:350px;margin: -10px 5px 0px 4px;">
+          <div class="modal-content">
+            <div class="modal-header" style="padding:4px;">
+              <button type="button" class="close ping1" data-dismiss="modal">
+                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+              </button>
+              <div class="col-md-3"><img class="img-responsive" src="" alt="Logo" id="pingimg"></div>
+              <div class="col-md-8">
+                <h4 class="modal-title" id="pingtitle" style="color:#868282;text-align:left"></h4></div>
+            </div>
+            <div class="modal-body" style="padding: 0px 6px;">
+              <form>
+                <div class="form-group" style="text-align:left">
+                  <label for="comment" style="margin-left: 13px;margin-top:4px;color:#868282;text-align:left">Description:</label>
+                  <textarea class="form-control ping-form" rows="2" id="pingdes" placeholder="Describe more about how you feel..."
+                            style="outline: none;resize: none"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

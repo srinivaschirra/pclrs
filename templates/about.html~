@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="about-main">
+  <div class="container">
+    <div class="img-div"> <img src="/static/images/about.PNG" class="img-responsive about-banner-img">
+      <h2 class="text-center ping-erth-haeding">About PingEarth</h2> </div>
+      <div class="clearfix"></div>
+      <div id="exTab1" class="container">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active"> <a href="#1a" data-toggle="tab">OUR MISSION</a> </li>
+          <li><a href="#2a" data-toggle="tab">FAQS</a> </li>
+          <li><a href="#3a" data-toggle="tab">GET IN TOUCH</a> </li>
+        </ul>
+        <div class="tab-content clearfix">
+          <div class="tab-pane active" id="1a">
+<h3>Welcome to Ping.Earth - The Internet Consciousness Project </h3>
+<p>Ping.Earth is the premier Global Consciousness Network for individuals to Ping their thoughts, feelings, ideas, and daily human experience on a global map.  Each Ping is a unit of internet consciousness and expression of one’s experience.  Your Ping can be anonymous or public – You Choose.  All Pings are collected over time in your Persona Page so that you can see how you’re feeling and what you’re experiencing within your human life.  The vision is to see 2-3 Billion people around the world Pinging their daily experience for self-reflection, interconnectivity and perception of themselves as the individual as well as the world as a collective. </p>
+<p>Ping Universe utilizes its unique personalized multi colored quantum expression or Ping, to express and measure a single human expression of consciousness across the internet. Thoughts, feelings, actions and emotions of millions of individuals are simultaneously expressed, collected, shared and even transformed through the Ping Universe experience and its four dimensional global mapping platform.</p>
+ 
+<p>While there has been much acceptance today of the reality of a global brain, ping offers the opportunity to bring awareness to the global heart.</p>
+ 
+<p>Ping takes social media into the fourth dimension, beyond facebook and twitter.  Ping is beyond the blog, the mini-blog (facebook), the micro-blog (twitter), ping is the quantum blog ready for you to express your truest essence in a single moment. With Ping,  you can share your moment with millions of other Ping users, simultaneously, non-locally, and take this experience and assign an event or intention to it, ultimately creating the opportunity to transform the entire experience, mood, vibration and even health for all those participating.</p>
+<p>PingUniverse.com is a Human Connection Platform in which an individual can “Ping” a thought, feeling, action and/or experience as a unit of internet consciousness that is time/date stamped on a timeline and geo-located on a map.  The social media platform enables individuals to express their thoughts, feelings/emotions, intentions and actions as a “Ping” to empower them to create an account that monitors their daily feelings and experiences while building a collective community connecting locally as well as globally through technology.  The vision is to see 2-3 billion people around the world expressing themselves by creating a “Ping” as a unit of expression which tracks the time, date, geo location and type of expression.  Pinguniverse takes the expression and puts it on the map globally.  This creates an encyclopedia of information for data mining regarding dominant feelings, emotions, thoughts and actions with trends of data tracked by location around the world.</p>
+ 
+<p>The individual chooses a Ping as a reflection of their feelings/emotions, thoughts or intentions.  We provide a platform for them to express themselves publically or anonymously with each and every Ping.  The individual has the opportunity to see how they are feeling over time and we will plug-in resources to elevate their state of mind, consciousness, and vibration.  Individuals can use the Pings for themselves or send Pings to friends or anyone within the global network. </p>
+ 
+<p>The intention of Pinguniverse.com is to awaken humanity by enabling individuals to truly voice how they are feeling and what they are experiencing through a simple click through known as a Ping. The purpose of our business is to create a self-evoloving human network and unique platform that gives humanity the ability to create an expression that is a reflection of one’s self as well as the collective on a global map.  Our goal and intention is to create a global ecosystem of users who are connected through technology to create awareness of one’s self, each other, while promoting, understanding and making the world a better place.</p>
+
+<h2>Vision</h2>
+
+<p>Pinguniverse.com has a vision to be a global leader in emotional intelligence, data mining, and expressions of internet consciousness by facilitating an interactive platform empowering individuals to express themselves by creating Pings as a reflection of their feelings/emotions, thoughts, intentions and actions.  The intention is to co-create a global community with users to share our passion of learning about ourselves and one another while making the world a better place.
+</p>
+
+<h2>Mission</h2>
+<p>To bring the voice of the individual into the group to create an eye into global psychology trends where the individual experience becomes a collective expression of emotions, thoughts, and actions in real time on a map.</p>
+<p>To improve and impact the lives of others by facilitating an interactive platform empowering individuals to express, create and awaken to their conscious thoughts, beliefs, feelings/emotions, intentions and actions while creating oneness globally. The  intention is to help raise the vibration of the individual and within the collective through a profitable and socially conscious internet business.</p>
+<p>The human connection project enables each person to feel connected to the whole wide world. Ping technology is used for expression on an individual, group, or global level. </p>
+<p> Imagine having a real time 'eye' into the global psychology patterns? Imagine being a company who can see the expression of its workforce and its customers.  Imagine being a parent and able to see your child's human expression. </p>
+<p>The valuable contribution of Ping illuminates the unseen real time human experience based in emotions, thoughts, and actions. With having the information that ping can provide, managers can track their teams experience, store managers can track their customer experience, and make hr, marketing, and advertising decisions based from real individual experience.</p>
+<p>The ping technology enables someone in san francisco to feel connected to someone in Africa, Paris or even at the airport or next door.</p>
+<p>By participating in the ping experience, you gain greater self awareness, achieve goals easier and quicker, can monitor your emotional experience, and tell the world about your human experience therefore creating the human connection project.
+The silos of the social networks expand our networks yet there is real time 'unit' of psychological expression available to human being in the world.</p>
+          </div>
+          <div class="tab-pane" id="2a">
+<strong>What is a ping?</strong>
+<p>A Ping is a unit of internet consciousness personalized by the individual as a multi-color quantum expression that measures a single human emotion, vibration, state of consciousness and Being geo-located on a map anywhere in the world.</p>
+ 
+<strong>How can I Participate in the Ping Global Consciousness Network?</strong>
+<p>You can become a member of the Ping community by signing up at Ping.Earth website using most social media logins or by creating an account natively on our site.</p>
+ 
+<strong>How can I create a ping?</strong>
+<p>Once you have logged into the network, you will be guided to the Ping homepage where there will be a number of Pings to choose.  Decide which Ping feels most appropriate to you.  Select the Ping that you feel most aligned with.  A pop-up box will appear for you to choose to write a journal entry.  You can choose to collect ideas and thoughts with each ping as a short journal entry or you can choose to write nothing at all.  Your Ping expression will be geo-located on the map and within your persona page.</p>
+ 
+<strong>How can I view the Pings of others?</strong>
+<p>All Pings are visible on the Ping global map. You can expand or retract the map to see Pings in your local city, region or any country around the world. Ping.Earth will collect all of the Pings which will be depicted as graphs for specific days, weeks, months, or even years.</p>
+ 
+<strong>Are Pings Anonymous?</strong>
+<p>With the current version of Ping Universe, all Pings remain anonymous. Once the Ping.Earth introduces Ping Connections, participants will be able to invite each other to belong to their Ping circle to share and send quantum Ping expressions with and to one another.</p>
+ 
+<strong>Can a ping associated with a particular activity or event?</strong>
+<p>Not Yet. Pings are currently entered freely by Ping participants and are not associated with any particular event or activity. This will be a feature introduced in later iterations.</p>
+ 
+<strong>How long does a Ping live for?</strong>
+<p>A Ping lives forever. A ping never goes away. You can refer back to your Pings and journal entries for self-reflection, aha-moments and awakenings as an observer of your human experience.</p>
+ 
+<strong>Can I view Pings for a period of time?</strong>
+<p>Yes! You can view Pings for a period of time from one of the Ping filters on the main homepage. Pings can currently be view for a particular month, week or day. You can also filter Pings by type as well.</p>
+ 
+<strong>Can I change my Ping once created?</strong>
+<p>Not at this time. In our later product releases, we expect to add this feature along with the ability to associate a ping with a particular event or activity. Before and after Pings will be able to track an audience’s response to these events and activities.</p>
+ 
+<strong>Aside from creating a Ping for how I feel, can I associate an action with it too?</strong>
+<p>Not yet. But this is coming! Soon you will be able to exchange Pings for gestures of healing, goodwill and even send donations to those in need.</p>
+          </div>
+          <div class="tab-pane" id="3a">
+	    The Ping team consists of the following - 
+
+Ankit Khare - Founder
+https://www.linkedin.com/in/ankitkhare
+www.ankitkhare.com 
+Ankit@pingcolors.com
+Ankit is Ankit :). He is currently based in SF and was inspired by a deep spiritual journey to create Ping. 
+
+Stefani Pearsall, CEO
+stefani@pingcolors.com
+Stefani Pearsall is a world traveler, spiritual teacher and business woman.  Upon creating a successful career in banking having funded over $500 Million in financing, her ambitions shifted to social entrepreneurship to be of service to humanity.  Her intention is to assist with the awakening of human beings individually and collectively to raise the vibration of the individual and the collective through experiential technology, media, meditation and the human experience.  She is guided to improve and impact the lives of others and to have a positive impact on humanity through social change, interpersonal awareness, awakening, transformation, and co-creation. 
+
+Bhargava Vemula, CTO
+Bhargava (El barto) is the master coder based in our India Office located at Hyderabad.
+bart@pingcolors.com
+
+We are looking for funding and more professionals to come join the project. Email us on contact@pingcolors.com 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

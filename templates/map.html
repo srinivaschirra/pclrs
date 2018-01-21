@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block body %}
+<div class="banner-btn-ping">
+    <button type="button" onclick=duration_handler( "hr") class="btn btn-primary-ping">Hour</button>
+    <button type="button" onclick=duration_handler( "dy") class="btn btn-primary-ping">Day</button>
+    <button type="button" onclick=duration_handler( "wk") class="btn btn-primary-ping">Week</button>
+    <button type="button" onclick=duration_handler( "mn") class="btn btn-primary-ping">Month</button>
+    <button type="button" onclick=duration_handler( "yr") class="btn btn-primary-ping">Year</button>
+    <button type="button" onclick=duration_handler( "at") class="btn btn-primary-ping">All Time</button>
+</div>
+<div id='map'></div>
+<div class="footer-ping">
+    <div class="container-fluid">
+        <div id='ftr' class="pull-left footer-left0" /> </div>
+</div>
+<script>
+    shwmp();
+</script> {% endblock %}

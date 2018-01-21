@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="main-statistics">
+  <div class="container-fluid">
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <!-- AREA CHART -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title text-center">Ping Details</h3>
+                  <div class="box-tools pull-right"> </div>
+                </div>
+                <div class="box-body">
+                  <div class="col-md-6">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-sm table-hover">
+                        <thead>
+                          <tr>
+                            <th>TOTAL PINGS</th>
+                            <th>LAST WEEK</th>
+                            <th>LAST DAY</th>
+                            <th>LAST HOUR</th>
+                            <th>HIGHEST PINGS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span id='ttp'></span></td>
+                            <td><span id='lwp'></span></td>
+                            <td><span id='ldp'></span></td>
+                            <td><span id='hp'></span></td>
+                            <td style="color: #23b985;">
+                              <div><i class="fa fa-circle " aria-hidden="true" style="color: #5bff15;"></i>&nbsp;&nbsp;Hope</div>
+                              <div><i class="fa fa-star" aria-hidden="true" style="color: #23b985;"></i>&nbsp;&nbsp;Tired</div>
+                              <div><i class="fa fa-star" aria-hidden="true" style="color: #23b985;"></i>&nbsp;&nbsp;Sad</div>
+                              <div><i class="fa fa-star" aria-hidden="true" style="color: #68f3ff;"></i>&nbsp;&nbsp;Thanks</div>
+                              <div><i class="fa fa-star" aria-hidden="true" style="color: #f58daa;"></i>&nbsp;&nbsp;Love</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div id='persona_area' style="min-width: 310px; height: 200px; margin: 0 auto"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 ">
+            <div class="row">
+              <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title"> &nbsp;<i class="fa fa-calendar-o" aria-hidden="true"></i> &nbsp; &nbsp;Select days range to view statistics</h3>
+                  <div class="box-tools pull-right">
+                    <div class="dropdown" style="margin-top: -3px;">
+                      <button id="monthsDrop" style="border-style:none; width: 100%" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%"> Choose Year <span class="caret"></span> <i class="down-arrow pull-right"></i> </button>
+                      <ul class="dropdown-menu" aria-labelledby="monthsDrop">
+                        <li><a href="#">2018</a></li>
+                        <li><a href="#">2017</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-12 padding-less">
+                        <div class="box box-info">
+                          <div class="box-header with-border" style="background-color: #1322397a;">
+                          <h3 class="box-title">&nbsp;<i class="fa fa-circle-o" aria-hidden="true"></i>&nbsp;Total Pings Text Data</h3> </div>
+                          <div class="box-body">
+                            <div id="bchart" style='min-width: 250px; max-width: 800px;'> </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 padding-less">
+                        <div class="box box-info">
+                          <div class="box-header with-border" style="background-color: #1322397a;">
+                          <h3 class="box-title">&nbsp;<i class="fa fa-pie-chart" aria-hidden="true"></i>&nbsp;Emotional Pie Chart</h3> </div>
+                          <div class="box-body">
+                            <div id="pchart" style='min-width: 250px; max-width: 800px;'> </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 padding-less">
+                        <div class="box box-info">
+                          <div class="box-header with-border" style="background-color: #1322397a;">
+                          <h3 class="box-title">&nbsp;<i class="fa fa-cloud" aria-hidden="true"></i>&nbsp;Word Cloud</h3> </div>
+                          <div class="box-body">
+                            <div id="wcchart" style='min-width: 250px; max-width: 800px;'> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-12 padding-less">
+                        <div class="box box-info">
+                          <div class="box-header with-border" style="background-color: #1322397a;">
+                          <h3 class="box-title">&nbsp;<i class="fa fa-circle-o" aria-hidden="true"></i>&nbsp;Your Ping Time Line</h3> </div>
+                          <div class="box-body">
+                            <section class="demo dynamicContent" style="height: 1346px;overflow:auto;">
+                              <div id="content"> </div>
+                              <div id="loader"> <img src="../static/images/example_loading.gif"> LOADING... </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<script>
+persona();
+</script>
+
+{% endblock %}
